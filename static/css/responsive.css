@@ -32,8 +32,8 @@
   }
 
   .section-header .logo {
-  max-height: 200px; /* Adjusted for visibility */
-  width: 220px;
+  max-height: 40px; /* Adjusted for visibility */
+  width: auto;
 }
 
 @media (max-width: 992px) {

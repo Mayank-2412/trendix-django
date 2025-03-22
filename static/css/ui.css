@@ -429,8 +429,7 @@ p:last-child {
 
 .brand-wrap .logo, .navbar-brand .logo {
   margin-right: 7px;
-  max-height: 500px; /* Adjust to fit */
-  width: 220px; /* Maintain aspect ratio */
+  max-height: 42px; /* Adjust to fit */ /* Maintain aspect ratio */
   display: inline-block;
 }
 

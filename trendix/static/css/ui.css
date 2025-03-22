@@ -429,10 +429,11 @@ p:last-child {
 
 .brand-wrap .logo, .navbar-brand .logo {
   margin-right: 7px;
-  max-height: 500px; /* Adjust to fit */
-  width: 220px; /* Maintain aspect ratio */
+  max-height: 80px;
+  width: auto;
   display: inline-block;
 }
+
 .navbar-main .nav-link {
   font-weight: 500;
   color: #1c1c1c;
