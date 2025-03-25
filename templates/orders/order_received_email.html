@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Order Confirmation</title>
+    <style>
+        body { font-family: Arial, sans-serif; color: #333; line-height: 1.6; }
+        .container { width: 100%; max-width: 600px; margin: 0 auto; padding: 20px; }
+        h2 { color: #555; }
+        p, div { margin: 8px 0; }
+        .footer { margin-top: 20px; font-size: 14px; color: #777; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2>Dear {{ user.first_name }},</h2>
+
+        <p>Thank you for shopping with us! We have received your order and are preparing it for shipment.</p>
+
+        <h3><strong>Order Details:</strong></h3>
+        <div><strong>Order Number:</strong> {{ order.order_number }}</div>
+        <div><strong>Order Date:</strong> {{ order.created_at|date:"Y-m-d H:i:s" }}</div>
+        <div><strong>Shipping Address:</strong> {{ full_address }}</div>
+
+        <h3><strong>Products Ordered:</strong></h3>
+        <div>{{ product_details|linebreaksbr }}</div>
+
+        <h3><strong>Total Amount:</strong> ${{ order.order_total }}</h3>
+
+        <h3><strong>What’s Next?</strong></h3>
+        <ul>
+            <li>You will receive a shipping confirmation email once your order is dispatched.</li>
+            <!-- <li><a href="{{ tracking_url }}" style="color: #007bff; text-decoration: none;">Track your order here</a>.</li> -->
+        </ul>
+
+        <!-- <p>If you have any questions, contact our support team at <a href="mailto:support@example.com">support@example.com</a>.</p> -->
+
+        <div class="footer">
+            <p>Thank you for choosing us!</p>
+            <p><strong>Best Regards,</strong><br>TrendiX</p>
+        </div>
+    </div>
+</body>
+</html>
